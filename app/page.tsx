@@ -77,7 +77,7 @@ export default function Home(){
 
  return <>
   <a className="skip" href="#principal">Ir ao conteúdo</a>
-  <header className="frame"><a className="logo" href="#principal">PULSO<span>✦</span></a><nav aria-label="Principal"><a href="#sobre">Sobre</a><a href="#grade">Programação</a></nav><span className="header-tag">Projeto conceitual</span></header>
+  <header className="frame"><a className="logo brand-masthead" href="#principal"><img className="brand-image" src={(process.env.NEXT_PUBLIC_BASE_PATH ?? "") + "/brand-lockup.webp"} alt="Pulso Festival" width="640" height="160" decoding="async" /></a><nav aria-label="Principal"><a href="#sobre">Sobre</a><a href="#grade">Programação</a></nav><span className="header-tag">Projeto conceitual</span></header>
   <main id="principal" tabIndex={-1}>
    <section className="frame hero"><div className="hero-copy"><p className="label"><span className="ticker"></span> Música independente • Artes visuais</p><h1>PUL<span>SO</span></h1><p className="subtitle">O som da cidade<br/><i>fora de sintonia.</i></p><p className="desc">Dois dias de música independente e intervenções visuais. Escolha seus shows e mande o mesmo roteiro para quem vai com você.</p><a className="btn" href="#grade">Montar minha programação</a><p className="hero-note">Sem login, compra ou ingresso · Festival fictício</p></div><div className="visual"><div className="stage-image" role="img" aria-label="Público com mãos erguidas diante de palco com luzes violetas"/><SoundMark/><span className="stamp">SOM • LUZ • CIDADE</span></div></section>
    {invite.length>0&&<aside className="frame invite" aria-label="Roteiro compartilhado"><div><strong>Alguém te mandou um roteiro.</strong><p>{invite.length} {invite.length===1?"atração":"atrações"}: {invite.join(", ")}.</p></div><button type="button" className="export" onClick={addInvite}>Adicionar às minhas favoritas</button></aside>}
@@ -93,6 +93,6 @@ export default function Home(){
    </div></section>
    <section className="frame guide" aria-labelledby="guide-title"><div><p className="label">Informações da demonstração</p><h2 id="guide-title">Antes de ir.</h2></div><div><details><summary>Quando cada palco começa?</summary><p>Os primeiros shows do Pátio aparecem às 15h no sábado e às 14h no domingo. Os horários da grade são fictícios.</p></details><details><summary>Onde ficam as atrações favoritas?</summary><p>As escolhas ficam na aba até você fechar ou recarregar. Você pode baixar uma cópia ou copiar um link que contém só as atrações selecionadas. A página não envia o link para ninguém.</p></details><details><summary>O festival tem ingressos?</summary><p>Não. O Pulso é um projeto visual de portfólio. Não há evento, bilheteria ou local para visitar.</p></details></div></section>
   </main>
-  <footer className="frame"><strong>PULSO ✦</strong><p>Projeto conceitual de portfólio. Festival e atrações fictícios.</p><a href="https://toledo-felipe.vercel.app/portfolio">Portfólio de Toledo</a></footer>
+  <footer className="frame"><img className="brand-image brand-footer" src={(process.env.NEXT_PUBLIC_BASE_PATH ?? "") + "/brand-lockup.webp"} alt="Pulso Festival" width="640" height="160" decoding="async" /><p>Projeto conceitual de portfólio. Festival e atrações fictícios.</p><a href="https://toledo-felipe.vercel.app/portfolio">Portfólio de Toledo</a></footer>
  </>;
 }
